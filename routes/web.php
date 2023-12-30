@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
+    return view('frontend.home');
+});
+
+
+Route::get('/admin', function () {
     return view('backend.dashboard');
 });
+
+Route::get('/login', function () {
+    return view('backend.login');
+});
+
+Route::post('/login',[LoginController::class,'authenticate']);
