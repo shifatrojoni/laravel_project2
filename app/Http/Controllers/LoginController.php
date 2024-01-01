@@ -18,7 +18,7 @@ class LoginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
-       // print_r($credentials);
+    //    print_r($credentials);
     //    $pass = Hash::make('admin123');
     //   echo $pass;
  
